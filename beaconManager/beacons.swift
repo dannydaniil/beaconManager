@@ -64,15 +64,22 @@ class beacons: UIViewController {
     }(CMMotionManager())
     
 
-    //IBOutlets
-    @IBOutlet weak var testLabel: UILabel!
+    //Self IBOutlets
+    @IBOutlet weak var advertisingStatusLabel: UILabel!
     @IBOutlet weak var beaconDetailsLabel: UILabel!
-    @IBOutlet weak var accuracyLabel: UILabel!
-    @IBOutlet weak var activityTypeLabel: UILabel!
-    @IBOutlet weak var confidenceLabel: UILabel!
+    @IBOutlet weak var activityLabel: UILabel!
+    @IBOutlet weak var directionLabel: UILabel!
+    
+    
+    //Other IBOUtlets
+    @IBOutlet weak var otherBeaconDetailsLabel: UILabel!
+    @IBOutlet weak var otherDirectionLabel: UILabel!
+    @IBOutlet weak var otherActivityLabel: UILabel!
+    
+    
+    //IBIOutlets - Images
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var otherHeartImageView: UIImageView!
-    
     
     //distance
     var distance: Double?
@@ -133,31 +140,11 @@ class beacons: UIViewController {
         setupAccelerometer()
     }
     
-    func startHeartBlinking(withColor color: UIColor) {
-        UIView.animate(withDuration: 0.2, animations: {
-            self.image.tintColor = color
-        }) { (flag) in
-            if (flag) {
-                UIView.animate(withDuration: 0.2, animations: {
-                    self.image.tintColor = UIColor.red
-                })
-            }
-        }
-    }
-    
-    func endHeartBlinking() {
-        
-    }
-    
     func startVibration() {
         AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
     }
     
-    func endVibration() {
-        
-    }
-    
-    
+    // MARK: - DELEGATES
     
     func setupLocationDelegate() {
         locationManager.delegate = locationDelegate
@@ -200,10 +187,9 @@ class beacons: UIViewController {
                         
                         self.updateBeaconROC(withAccuracy: closestBeacon.accuracy)
 
-                        self.updateHeart(withCurrentLevel: self.currentLevel, previousLevel: previousLevel!)
                         
                         self.currentDistance = closestBeacon.accuracy
-                        let msg = "\(proximityMessage)"
+                        let msg = "\(String(describing: proximityMessage))"
                         self.beaconDetailsLabel.text = msg
                 }
             }
@@ -229,42 +215,11 @@ class beacons: UIViewController {
             motionTypeString = "none"
         }
         
+        self.directionLabel.text = motionTypeString
+        
         ref.child("coordinator").child("\(currentId)").setValue([
             "motionType" : motionTypeString
         ])
-    }
-    
-    func updateHeart(withCurrentLevel currentLevel: proximityLevel, previousLevel: proximityLevel) {
-        
-        if (currentLevel == .immediate) {
-            self.image.tintColor = UIColor.black
-        } else {
-            self.image.tintColor = UIColor.red
-            if currentIntention == motionIntention.approaching {
-                self.startVibration()
-                self.startHeartBlinking(withColor: UIColor.green)
-            } else {
-                self.endVibration()
-                self.endHeartBlinking()
-            }
-        }
-    }
-    
-    func changeHeartImage(toIndex index: Int, atLevel level: proximityLevel) {
-        
-        var temp = String()
-        switch level {
-        case proximityLevel.immediate:
-            temp = "immediate"
-        case proximityLevel.near:
-            temp = "near\(index)"
-        case proximityLevel.far:
-            temp = "far\(index)"
-        default:
-            return
-        }
-        
-        image.image = UIImage(named: temp)   
     }
     
     func setupEmitterBeacon() {
@@ -311,14 +266,6 @@ class beacons: UIViewController {
                 self.handleMotion(xComponent: motion!.userAcceleration.x,
                                   yComponent: motion!.userAcceleration.y,
                                   zComponent: motion!.userAcceleration.z)
-                
-//                if(motion!.userAcceleration.z > 0.13) {
-//                    self.confidenceLabel.text = "YES"
-//                    print("YES")
-//                } else {
-//                    self.confidenceLabel.text = "NO"
-//                    print("NO")
-//                }
           }
         }   
     }
@@ -380,24 +327,24 @@ class beacons: UIViewController {
         //DATA RESULTS
         if( yMotionCounter > 58 && !yMotionFlag){
             
-            self.confidenceLabel.text = "STATIONARY"
+            self.activityLabel.text = "STATIONARY"
             currentMotion = motionType.stationary
             
         }else if (xMotionFlag && xMotionCounter > 5){
 
-            self.confidenceLabel.text = "SPINNING"
+            self.activityLabel.text = "SPINNING"
             currentMotion = motionType.walking
         }
 
         else if(zMotionFlag && zMotionCounter > 5){
 
-            self.confidenceLabel.text = "SHAKIN"
+            self.activityLabel.text = "SHAKIN"
             currentMotion = motionType.walking
         }
         
         else if( yMotionFlag && yMotionCounter > 5){
             
-            self.confidenceLabel.text = "WALKING"
+            self.activityLabel.text = "WALKING"
             currentMotion = motionType.walking
         }
     }
@@ -406,28 +353,21 @@ class beacons: UIViewController {
 
         ref = Database.database().reference()
 
-        ref.child("coordinator").child(otherId).observe(.value) { (snapshot) in
-            if let motionType = snapshot.value as? String {
-                self.updateOtherHeart(withMotionType: motionType)
-            }
-        }
-    }
-    
-    func updateOtherHeart(withMotionType motionType: String){
-        if motionType != "away" && motionType != "none" {
-            
-            UIView.animate(withDuration: 0.3, animations: {
-                self.otherHeartImageView.tintColor = UIColor.green
-            }) { (flag) in
-                if (flag) {
-                    UIView.animate(withDuration: 0.3, animations: {
-                        self.otherHeartImageView.tintColor = UIColor.red
-                    })
+        ref.child(otherId).observe(.value) { (snapshot) in
+            if let data = snapshot.value as? [String: String] {
+                
+                if let activity = data["activity"]{
+                    self.otherActivityLabel.text = activity
+                }
+                
+                if let direction = data["direction"] {
+                    self.otherDirectionLabel.text = direction
+                }
+                
+                if let distance = data["distance"] {
+                    self.otherBeaconDetailsLabel.text = distance
                 }
             }
-        } else {
-            
-            self.otherHeartImageView.tintColor = UIColor.red
         }
     }
     
@@ -444,13 +384,13 @@ class beacons: UIViewController {
     func advertiseDevice() {
         let peripheralData = beaconRegion.peripheralData(withMeasuredPower: nil)
         beaconManager.startAdvertising(((peripheralData as NSDictionary) as! [String : Any]))
-        testLabel.text = "Advertising"
+        advertisingStatusLabel.text = "Advertising"
         print("Advertising")
     }
     
     func stopAdvertisingDevice() {
         beaconManager.stopAdvertising()
-        testLabel.text = "Not advertising"
+        advertisingStatusLabel.text = "Not advertising"
         print("Not advertising")
     }
     
@@ -494,4 +434,3 @@ class beacons: UIViewController {
         }
     }
 }
-
