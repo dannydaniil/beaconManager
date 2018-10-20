@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		267E3217217BE9540072C1C9 /* settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267E3216217BE9540072C1C9 /* settings.swift */; };
+		267E3219217BEB520072C1C9 /* sensitivity variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267E3218217BEB520072C1C9 /* sensitivity variables.swift */; };
 		5E444011213C736B00BBFDD6 /* LocationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E444010213C736B00BBFDD6 /* LocationDelegate.swift */; };
 		5E82B2E72134E003001DA3FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E82B2E62134E003001DA3FC /* AppDelegate.swift */; };
 		5E82B2E92134E003001DA3FC /* location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E82B2E82134E003001DA3FC /* location.swift */; };
@@ -43,6 +45,8 @@
 /* Begin PBXFileReference section */
 		1776A584157544FFB6E38BAB /* Pods-beaconManagerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beaconManagerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-beaconManagerUITests/Pods-beaconManagerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		23646204D01B4CAC9A1A7677 /* Pods_beaconManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_beaconManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		267E3216217BE9540072C1C9 /* settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settings.swift; sourceTree = "<group>"; };
+		267E3218217BEB520072C1C9 /* sensitivity variables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "sensitivity variables.swift"; sourceTree = "<group>"; };
 		43AD99F3E9B4EB8089A973B1 /* Pods-beaconManagerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beaconManagerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-beaconManagerUITests/Pods-beaconManagerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4C816CFC3D3B8C9AF73E6B33 /* Pods-beaconManagerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beaconManagerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-beaconManagerTests/Pods-beaconManagerTests.release.xcconfig"; sourceTree = "<group>"; };
 		5E444010213C736B00BBFDD6 /* LocationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDelegate.swift; sourceTree = "<group>"; };
@@ -125,11 +129,13 @@
 				5E82B2E62134E003001DA3FC /* AppDelegate.swift */,
 				5E82B2E82134E003001DA3FC /* location.swift */,
 				5E82B2EA2134E003001DA3FC /* Main.storyboard */,
+				267E3218217BEB520072C1C9 /* sensitivity variables.swift */,
 				5E82B2ED2134E008001DA3FC /* Assets.xcassets */,
 				5E82B2EF2134E008001DA3FC /* LaunchScreen.storyboard */,
 				5E82B2F22134E008001DA3FC /* Info.plist */,
 				5E82B31421374671001DA3FC /* GoogleService-Info.plist */,
 				5E82B316213854A3001DA3FC /* beacons.swift */,
+				267E3216217BE9540072C1C9 /* settings.swift */,
 				5E444010213C736B00BBFDD6 /* LocationDelegate.swift */,
 				5E82B31A2138561C001DA3FC /* BeaconDelegate.swift */,
 			);
@@ -408,6 +414,8 @@
 			files = (
 				5E82B2E92134E003001DA3FC /* location.swift in Sources */,
 				5E444011213C736B00BBFDD6 /* LocationDelegate.swift in Sources */,
+				267E3219217BEB520072C1C9 /* sensitivity variables.swift in Sources */,
+				267E3217217BE9540072C1C9 /* settings.swift in Sources */,
 				5E82B317213854A3001DA3FC /* beacons.swift in Sources */,
 				5E82B2E72134E003001DA3FC /* AppDelegate.swift in Sources */,
 				5E82B31B2138561C001DA3FC /* BeaconDelegate.swift in Sources */,

@@ -88,11 +88,11 @@ class beacons: UIViewController {
     var emitterProfile: String!
     
     // CoreMotion Variables
-    var yMotionCounter: Int!
+    var yMotionCounter: Double!
     var yMotionFlag: Bool!
-    var xMotionCounter: Int!
+    var xMotionCounter: Double!
     var xMotionFlag: Bool!
-    var zMotionCounter: Int!
+    var zMotionCounter: Double!
     var zMotionFlag: Bool!
     
     var currentMotion: motionType = {
@@ -237,11 +237,11 @@ class beacons: UIViewController {
     
     func setupAccelerometer() {
         
-        yMotionCounter = 0
+        yMotionCounter = 0.0
         yMotionFlag = false
-        xMotionCounter = 0
+        xMotionCounter = 0.0
         xMotionFlag = false
-        zMotionCounter = 0
+        zMotionCounter = 0.0
         zMotionFlag = false
         
         currentDistance = 0
@@ -263,11 +263,13 @@ class beacons: UIViewController {
     func handleMotion(xComponent: Double, yComponent: Double, zComponent: Double){
         
         //DATA PROCESSING
-        if(yComponent < 0.05) {
+        
+        // 0.05 is the senitivity
+        if(yComponent < ySen) {
             if(yMotionFlag == false){
                 yMotionCounter = yMotionCounter + 1
             } else {
-                yMotionCounter = 1
+                yMotionCounter = 1.0
             }
             yMotionFlag = false
         } else {
@@ -275,16 +277,16 @@ class beacons: UIViewController {
             if(yMotionFlag == true){
                 yMotionCounter = yMotionCounter + 1
             } else {
-                yMotionCounter = 1
+                yMotionCounter = 1.0
             }
             yMotionFlag = true
         }
         
-        if(xComponent < 0.05) {
+        if(xComponent < xSen) {
             if(xMotionFlag == false){
                 xMotionCounter = xMotionCounter + 1
             } else {
-                xMotionCounter = 1
+                xMotionCounter = 1.0
             }
             xMotionFlag = false
         } else {
@@ -292,16 +294,16 @@ class beacons: UIViewController {
             if(xMotionFlag == true){
                 xMotionCounter = xMotionCounter + 1
             } else {
-                xMotionCounter = 1
+                xMotionCounter = 1.0
             }
             xMotionFlag = true
         }
         
-        if(zComponent < 0.2) {
+        if(zComponent < zSen) {
             if(zMotionFlag == false){
                 zMotionCounter = zMotionCounter + 1
             } else {
-                zMotionCounter = 1
+                zMotionCounter = 1.0
             }
             zMotionFlag = false
         } else {
@@ -309,33 +311,33 @@ class beacons: UIViewController {
             if(zMotionFlag == true){
                 zMotionCounter = zMotionCounter + 1
             } else {
-                zMotionCounter = 1
+                zMotionCounter = 1.0
             }
             zMotionFlag = true
         }
         
         //DATA RESULTS
-        if( yMotionCounter > 58 && !yMotionFlag){
+        if( yMotionCounter > stationarySen && !yMotionFlag){
             
             ref.child(currentId).child("activity").setValue("STATIONARY")
             self.activityLabel.text = "STATIONARY"
             currentMotion = motionType.stationary
             
-        }else if (xMotionFlag && xMotionCounter > 5){
-
+        }else if (xMotionFlag && xMotionCounter > spinningSen){
+            
             ref.child(currentId).child("activity").setValue("SPINNING")
             self.activityLabel.text = "SPINNING"
-            currentMotion = motionType.walking
+            currentMotion = motionType.spinning
         }
 
-        else if(zMotionFlag && zMotionCounter > 5){
+        else if(zMotionFlag && zMotionCounter > shakingSen){
 
             ref.child(currentId).child("activity").setValue("SHAKIN")
             self.activityLabel.text = "SHAKIN"
-            currentMotion = motionType.walking
+            currentMotion = motionType.shaking
         }
         
-        else if( yMotionFlag && yMotionCounter > 5){
+        else if( yMotionFlag && yMotionCounter > walkingSen){
             
             ref.child(currentId).child("activity").setValue("WALKING")
             self.activityLabel.text = "WALKING"

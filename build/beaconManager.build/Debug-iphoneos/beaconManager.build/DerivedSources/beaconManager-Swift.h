@@ -224,6 +224,11 @@ SWIFT_CLASS("_TtC13beaconManager16LocationDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+@interface UIViewController (SWIFT_EXTENSION(beaconManager))
+- (void)dismissKeyboard;
+@end
+
 @class UILabel;
 @class NSBundle;
 @class NSCoder;
@@ -255,6 +260,28 @@ SWIFT_CLASS("_TtC13beaconManager8location")
 - (void)locationManager:(CLLocationManager * _Nonnull)manager didUpdateLocations:(NSArray<CLLocation *> * _Nonnull)locations;
 - (void)locationManager:(CLLocationManager * _Nonnull)manager didUpdateHeading:(CLHeading * _Nonnull)newHeading;
 - (void)didReceiveMemoryWarning;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UITextField;
+@class UIButton;
+
+SWIFT_CLASS("_TtC13beaconManager8settings")
+@interface settings : UITableViewController <UITextFieldDelegate>
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified xSensitivity;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified ySensitivity;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified zSensitivity;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified stationarySensitivity;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified walkingSensitivity;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified spinningSensitivity;
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified shakingSensitivity;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified restoreDefaults;
+- (void)viewDidLoad;
+- (void)textFieldDidEndEditing:(UITextField * _Nonnull)textField;
+- (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
+- (IBAction)restoreButtonPressed:(id _Nonnull)sender;
+- (nonnull instancetype)initWithStyle:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end

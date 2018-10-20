@@ -1,9 +1,11 @@
 version: "Apple Swift version 4.2 (swiftlang-1000.11.37.1 clang-1000.11.45.1)"
 options: "e8c0ddff869f39202974574388bdc31a"
-build_time: [1540073008, 356000000]
+build_time: [1540078861, 808988000]
 inputs:
   "/Users/anmol/Desktop/Closr/repos/beaconManager/beaconManager/location.swift": [1540070346, 0]
   "/Users/anmol/Desktop/Closr/repos/beaconManager/beaconManager/LocationDelegate.swift": [1540070346, 0]
-  "/Users/anmol/Desktop/Closr/repos/beaconManager/beaconManager/beacons.swift": [1540073006, 0]
+  "/Users/anmol/Desktop/Closr/repos/beaconManager/beaconManager/sensitivity variables.swift": [1540078696, 0]
+  "/Users/anmol/Desktop/Closr/repos/beaconManager/beaconManager/settings.swift": [1540078861, 0]
+  "/Users/anmol/Desktop/Closr/repos/beaconManager/beaconManager/beacons.swift": [1540078325, 0]
   "/Users/anmol/Desktop/Closr/repos/beaconManager/beaconManager/AppDelegate.swift": [1540070346, 0]
   "/Users/anmol/Desktop/Closr/repos/beaconManager/beaconManager/BeaconDelegate.swift": [1540070346, 0]
