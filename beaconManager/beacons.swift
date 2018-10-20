@@ -16,7 +16,7 @@ import AudioToolbox
 
 let currentId = "1"
 let otherId   = "2"
-let minor: CLBeaconMinorValue = 2
+let minor: CLBeaconMinorValue = UInt16(currentId)!
 
 let maxSameLevelCounter = 3
 
@@ -44,7 +44,7 @@ enum motionIntention: Int {
 class beacons: UIViewController {
 
     var ref: DatabaseReference!
-    
+
     let locationDelegate = LocationDelegate()
     let locationManager: CLLocationManager = {
         $0.requestWhenInUseAuthorization()
@@ -66,20 +66,15 @@ class beacons: UIViewController {
 
     //Self IBOutlets
     @IBOutlet weak var advertisingStatusLabel: UILabel!
-    @IBOutlet weak var beaconDetailsLabel: UILabel!
+    @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var activityLabel: UILabel!
     @IBOutlet weak var directionLabel: UILabel!
     
     
     //Other IBOUtlets
-    @IBOutlet weak var otherBeaconDetailsLabel: UILabel!
+    @IBOutlet weak var otherDistanceLabel: UILabel!
     @IBOutlet weak var otherDirectionLabel: UILabel!
     @IBOutlet weak var otherActivityLabel: UILabel!
-    
-    
-    //IBIOutlets - Images
-    @IBOutlet weak var image: UIImageView!
-    @IBOutlet weak var otherHeartImageView: UIImageView!
     
     //distance
     var distance: Double?
@@ -132,11 +127,12 @@ class beacons: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.image.tintColor = UIColor.red
+        ref = Database.database().reference()
+        
+        setupObserver()
         setupLocationDelegate()
         setupEmitterBeacon()
         setupReceiverBeacon()
-        setupFirebase()
         setupAccelerometer()
     }
     
@@ -163,7 +159,6 @@ class beacons: UIViewController {
                     if closestBeacon != self.lastFoundBeacon || self.lastProximity != closestBeacon.proximity  {
                         self.lastFoundBeacon = closestBeacon
                         self.lastProximity = closestBeacon.proximity
-                        
                         var proximityMessage: String!
                         
                         var previousLevel = proximityLevel(rawValue: 0)
@@ -187,10 +182,8 @@ class beacons: UIViewController {
                         
                         self.updateBeaconROC(withAccuracy: closestBeacon.accuracy)
 
-                        
-                        self.currentDistance = closestBeacon.accuracy
-                        let msg = "\(String(describing: proximityMessage))"
-                        self.beaconDetailsLabel.text = msg
+                        self.ref.child(currentId).child("distance").setValue(proximityMessage)
+                        self.distanceLabel.text = proximityMessage
                 }
             }
         }
@@ -215,11 +208,8 @@ class beacons: UIViewController {
             motionTypeString = "none"
         }
         
+        ref.child(currentId).child("direction").setValue(motionTypeString)
         self.directionLabel.text = motionTypeString
-        
-        ref.child("coordinator").child("\(currentId)").setValue([
-            "motionType" : motionTypeString
-        ])
     }
     
     func setupEmitterBeacon() {
@@ -327,32 +317,33 @@ class beacons: UIViewController {
         //DATA RESULTS
         if( yMotionCounter > 58 && !yMotionFlag){
             
+            ref.child(currentId).child("activity").setValue("STATIONARY")
             self.activityLabel.text = "STATIONARY"
             currentMotion = motionType.stationary
             
         }else if (xMotionFlag && xMotionCounter > 5){
 
+            ref.child(currentId).child("activity").setValue("SPINNING")
             self.activityLabel.text = "SPINNING"
             currentMotion = motionType.walking
         }
 
         else if(zMotionFlag && zMotionCounter > 5){
 
+            ref.child(currentId).child("activity").setValue("SHAKIN")
             self.activityLabel.text = "SHAKIN"
             currentMotion = motionType.walking
         }
         
         else if( yMotionFlag && yMotionCounter > 5){
             
+            ref.child(currentId).child("activity").setValue("WALKING")
             self.activityLabel.text = "WALKING"
             currentMotion = motionType.walking
         }
     }
     
-    func setupFirebase() {
-
-        ref = Database.database().reference()
-
+    func setupObserver() {
         ref.child(otherId).observe(.value) { (snapshot) in
             if let data = snapshot.value as? [String: String] {
                 
@@ -365,7 +356,7 @@ class beacons: UIViewController {
                 }
                 
                 if let distance = data["distance"] {
-                    self.otherBeaconDetailsLabel.text = distance
+                    self.otherDistanceLabel.text = distance
                 }
             }
         }

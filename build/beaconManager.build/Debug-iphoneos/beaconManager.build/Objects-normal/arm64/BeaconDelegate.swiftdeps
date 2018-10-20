@@ -1,0 +1,236 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "BeaconDelegate"
+provides-nominal:
+- "13beaconManager14BeaconDelegateC"
+provides-member:
+- ["13beaconManager14BeaconDelegateC", ""]
+provides-dynamic-lookup:
+- "peripheralManagerDidUpdateState"
+depends-top-level:
+- "BeaconDelegate"
+- "CBPeripheralManager"
+- "CBPeripheralManagerDelegate"
+- "NSObject"
+depends-member:
+- ["13beaconManager14BeaconDelegateC", "CBPeripheralManager"]
+- ["13beaconManager14BeaconDelegateC", "deinit"]
+- ["13beaconManager14BeaconDelegateC", "didUpdateStateCallback"]
+- ["13beaconManager14BeaconDelegateC", "init"]
+- ["13beaconManager14BeaconDelegateC", "peripheralManager"]
+- ["13beaconManager14BeaconDelegateC", "peripheralManagerDidStartAdvertising"]
+- ["13beaconManager14BeaconDelegateC", "peripheralManagerDidUpdateState"]
+- ["13beaconManager14BeaconDelegateC", "peripheralManagerIsReady"]
+- ["13beaconManager14BeaconDelegateC", "peripheralManagerIsReadyToUpdateSubscribers"]
+- ["So27CBPeripheralManagerDelegateP", ""]
+- !private ["So27CBPeripheralManagerDelegateP", "didUpdateStateCallback"]
+- ["So27CBPeripheralManagerDelegateP", "peripheralManager"]
+- ["So27CBPeripheralManagerDelegateP", "peripheralManagerDidStartAdvertising"]
+- ["So27CBPeripheralManagerDelegateP", "peripheralManagerDidUpdateState"]
+- ["So27CBPeripheralManagerDelegateP", "peripheralManagerIsReady"]
+- ["So27CBPeripheralManagerDelegateP", "peripheralManagerIsReadyToUpdateSubscribers"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "didUpdateStateCallback"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "init"]
+- ["s7CVarArgP", "peripheralManager"]
+- ["s7CVarArgP", "peripheralManagerDidStartAdvertising"]
+- ["s7CVarArgP", "peripheralManagerDidUpdateState"]
+- ["s7CVarArgP", "peripheralManagerIsReady"]
+- ["s7CVarArgP", "peripheralManagerIsReadyToUpdateSubscribers"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "didUpdateStateCallback"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- ["s28CustomDebugStringConvertibleP", "peripheralManager"]
+- ["s28CustomDebugStringConvertibleP", "peripheralManagerDidStartAdvertising"]
+- ["s28CustomDebugStringConvertibleP", "peripheralManagerDidUpdateState"]
+- ["s28CustomDebugStringConvertibleP", "peripheralManagerIsReady"]
+- ["s28CustomDebugStringConvertibleP", "peripheralManagerIsReadyToUpdateSubscribers"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "didUpdateStateCallback"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "peripheralManager"]
+- ["s23CustomStringConvertibleP", "peripheralManagerDidStartAdvertising"]
+- ["s23CustomStringConvertibleP", "peripheralManagerDidUpdateState"]
+- ["s23CustomStringConvertibleP", "peripheralManagerIsReady"]
+- ["s23CustomStringConvertibleP", "peripheralManagerIsReadyToUpdateSubscribers"]
+- ["SQ", ""]
+- !private ["SQ", "didUpdateStateCallback"]
+- !private ["SQ", "init"]
+- !private ["SQ", "init"]
+- ["SQ", "peripheralManager"]
+- ["SQ", "peripheralManagerDidStartAdvertising"]
+- ["SQ", "peripheralManagerDidUpdateState"]
+- ["SQ", "peripheralManagerIsReady"]
+- ["SQ", "peripheralManagerIsReadyToUpdateSubscribers"]
+- ["SH", ""]
+- !private ["SH", "didUpdateStateCallback"]
+- !private ["SH", "init"]
+- !private ["SH", "init"]
+- ["SH", "peripheralManager"]
+- ["SH", "peripheralManagerDidStartAdvertising"]
+- ["SH", "peripheralManagerDidUpdateState"]
+- ["SH", "peripheralManagerIsReady"]
+- ["SH", "peripheralManagerIsReadyToUpdateSubscribers"]
+- ["So8NSObjectC", "CBPeripheralManager"]
+- ["So8NSObjectC", ""]
+- ["So8NSObjectC", "didUpdateStateCallback"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "peripheralManager"]
+- ["So8NSObjectC", "peripheralManagerDidStartAdvertising"]
+- ["So8NSObjectC", "peripheralManagerDidUpdateState"]
+- ["So8NSObjectC", "peripheralManagerIsReady"]
+- ["So8NSObjectC", "peripheralManagerIsReadyToUpdateSubscribers"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "didUpdateStateCallback"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "init"]
+- ["So8NSObjectP", "peripheralManager"]
+- ["So8NSObjectP", "peripheralManagerDidStartAdvertising"]
+- ["So8NSObjectP", "peripheralManagerDidUpdateState"]
+- ["So8NSObjectP", "peripheralManagerIsReady"]
+- ["So8NSObjectP", "peripheralManagerIsReadyToUpdateSubscribers"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "didUpdateStateCallback"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "peripheralManager"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "peripheralManagerDidStartAdvertising"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "peripheralManagerDidUpdateState"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "peripheralManagerIsReady"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "peripheralManagerIsReadyToUpdateSubscribers"]
+depends-nominal:
+- "13beaconManager14BeaconDelegateC"
+- "So27CBPeripheralManagerDelegateP"
+- "s7CVarArgP"
+- "s28CustomDebugStringConvertibleP"
+- "s23CustomStringConvertibleP"
+- "SQ"
+- "SH"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreLocation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreAudio.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Headers/FirebaseStorage-umbrella.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore-umbrella.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FirebaseFirestore-umbrella.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseDatabase/FirebaseDatabase.framework/Headers/FirebaseDatabase-umbrella.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuth-umbrella.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRMutableData.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageMetadata.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUserMetadata.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRSnapshotMetadata.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageReference.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDatabaseReference.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRCollectionReference.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRDocumentReference.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestoreSource.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorage.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Headers/FirebaseStorage.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRDocumentChange.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthAPNSTokenType.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDataEventType.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestore.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FirebaseFirestore.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDatabase.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseDatabase/FirebaseDatabase.framework/Headers/FirebaseDatabase.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/Pods/Firebase/CoreOnly/Sources/Firebase.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthUIDelegate.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics+AppDelegate.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFieldValue.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRServerValue.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRWriteBatch.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFieldPath.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuth.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuth.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageDownloadTask.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageUploadTask.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageTask.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageObservableTask.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthCredential.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRPhoneAuthCredential.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseCore/FirebaseCore.framework/Headers/FIRLoggerLevel.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuthVersion.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRListenerRegistration.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseCore/FirebaseCore.framework/Headers/FIRConfiguration.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseCore/FirebaseCore.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRTransaction.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUserInfo.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAdditionalUserInfo.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRTimestamp.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseCore/FirebaseCore.framework/Headers/FIRApp.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIROAuthProvider.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRGitHubAuthProvider.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRGoogleAuthProvider.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRPhoneAuthProvider.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRFacebookAuthProvider.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIREmailAuthProvider.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRTwitterAuthProvider.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUser.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRParameterNames.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIREventNames.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRUserPropertyNames.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRActionCodeSettings.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestoreSettings.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthSettings.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseCore/FirebaseCore.framework/Headers/FIROptions.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestoreErrors.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageConstants.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthDataResult.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthTokenResult.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRTransactionResult.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRGeoPoint.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDataSnapshot.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageTaskSnapshot.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRDocumentSnapshot.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRQuerySnapshot.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRQuery.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseDatabase/FirebaseDatabase.framework/Headers/FIRDatabaseQuery.h"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/Pods/Firebase/CoreOnly/Sources/module.modulemap"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Modules/module.modulemap"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseCore/FirebaseCore.framework/Modules/module.modulemap"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Modules/module.modulemap"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseDatabase/FirebaseDatabase.framework/Modules/module.modulemap"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Modules/module.modulemap"
+- "/Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreBluetooth.framework/Headers/CoreBluetooth.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "d34fa974f4aed15bec09a249c50d8eeb"

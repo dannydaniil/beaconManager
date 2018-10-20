@@ -1,0 +1,42 @@
+dependencies: \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseAuth/Firebase/Auth/Source/AuthProviders/Phone/FIRPhoneAuthProvider.m \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/build/Pods.build/Debug-iphoneos/FirebaseAuth.build/module.modulemap \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRPhoneAuthProvider.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/build/Pods.build/Debug-iphoneos/FirebaseCore.build/module.modulemap \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseCore/Firebase/Core/Private/FIRLogger.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseCore/Firebase/Core/Public/FIROptions.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseCore/Firebase/Core/Public/FirebaseCore.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseCore/Firebase/Core/Public/FIRLoggerLevel.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseCore/Firebase/Core/Public/FIRConfiguration.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseCore/Firebase/Core/Public/FIRApp.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseCore/Firebase/Core/Public/FIRAnalyticsConfiguration.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/Target\ Support\ Files/FirebaseCore/FirebaseCore-umbrella.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseAuth/Firebase/Auth/Source/AuthProviders/Phone/FIRPhoneAuthCredential_Internal.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRPhoneAuthCredential.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRAuthCredential.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthAPNSToken.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRAuthAPNSTokenType.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthAPNSTokenManager.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthAppCredential.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthAppCredentialManager.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthGlobalWorkQueue.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuth_Internal.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRAuth.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRAuthErrors.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthURLPresenter.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthNotificationManager.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthErrorUtils.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRAuthBackend.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRAuthSettings.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthWebUtils.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FirebaseAuthVersion.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRGetProjectConfigRequest.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRIdentityToolkitRequest.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRAuthRequestConfiguration.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRAuthRPCRequest.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRGetProjectConfigResponse.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRAuthRPCResponse.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRSendVerificationCodeRequest.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRSendVerificationCodeResponse.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRVerifyClientRequest.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRVerifyClientResponse.h

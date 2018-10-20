@@ -1,0 +1,21 @@
+dependencies: \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseDatabase/Firebase/Database/Core/FQueryParams.m \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/build/Pods.build/Debug-iphoneos/FirebaseDatabase.build/module.modulemap \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseDatabase/Firebase/Database/Core/FQueryParams.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseDatabase/Firebase/Database/Utilities/FValidation.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseDatabase/Firebase/Database/Core/Utilities/FPath.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseDatabase/Firebase/Database/Public/FIRDataEventType.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseDatabase/Firebase/Database/Utilities/FParsedUrl.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseDatabase/Firebase/Database/Core/FRepoInfo.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseDatabase/Firebase/Database/Utilities/FTypedefs.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseDatabase/Firebase/Database/Constants/FConstants.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseDatabase/Firebase/Database/FIndex.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseDatabase/Firebase/Database/FPriorityIndex.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseDatabase/Firebase/Database/Utilities/FUtilities.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseDatabase/Firebase/Database/Core/View/Filter/FNodeFilter.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseDatabase/Firebase/Database/Core/View/Filter/FIndexedFilter.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseDatabase/Firebase/Database/Core/View/Filter/FLimitedFilter.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseDatabase/Firebase/Database/FRangedFilter.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseDatabase/Firebase/Database/Snapshot/FNode.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseDatabase/Firebase/Database/Api/Private/FTypedefs_Private.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseDatabase/Firebase/Database/Snapshot/FSnapshotUtilities.h

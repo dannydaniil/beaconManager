@@ -1,0 +1,29 @@
+dependencies: \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseDatabase/Firebase/Database/Realtime/FWebSocketConnection.m \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/build/Pods.build/Debug-iphoneos/FirebaseDatabase.build/module.modulemap \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/build/Pods.build/Debug-iphoneos/FirebaseCore.build/module.modulemap \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseCore/Firebase/Core/Private/FIRLogger.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseCore/Firebase/Core/Public/FIROptions.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseCore/Firebase/Core/Public/FirebaseCore.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseCore/Firebase/Core/Public/FIRLoggerLevel.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseCore/Firebase/Core/Public/FIRConfiguration.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseCore/Firebase/Core/Public/FIRApp.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseCore/Firebase/Core/Public/FIRAnalyticsConfiguration.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/Target\ Support\ Files/FirebaseCore/FirebaseCore-umbrella.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseDatabase/Firebase/Database/Realtime/FWebSocketConnection.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseDatabase/Firebase/Database/third_party/SocketRocket/FSRWebSocket.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseDatabase/Firebase/Database/Utilities/FUtilities.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseDatabase/Firebase/Database/Utilities/FParsedUrl.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseDatabase/Firebase/Database/Core/FRepoInfo.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseDatabase/Firebase/Database/Core/Utilities/FPath.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseDatabase/Firebase/Database/Constants/FConstants.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseDatabase/Firebase/Database/Public/FIRDatabaseReference.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseDatabase/Firebase/Database/Public/FIRDatabaseQuery.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseDatabase/Firebase/Database/Public/FIRDataEventType.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseDatabase/Firebase/Database/Public/FIRDataSnapshot.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseDatabase/Firebase/Database/Public/FIRDatabase.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseDatabase/Firebase/Database/Public/FIRMutableData.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseDatabase/Firebase/Database/Public/FIRTransactionResult.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseDatabase/Firebase/Database/Public/FIRServerValue.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseDatabase/Firebase/Database/Utilities/FStringUtilities.h \
+  /Users/anmol/Desktop/Closr/repos/beaconManager/Pods/FirebaseDatabase/Firebase/Database/Api/Private/FIRDatabase_Private.h
