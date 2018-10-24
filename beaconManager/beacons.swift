@@ -14,8 +14,8 @@ import CoreMotion
 import AudioToolbox
 
 
-let currentId = "1"
-let otherId   = "2"
+let currentId = "2"
+let otherId   = "1"
 let minor: CLBeaconMinorValue = UInt16(currentId)!
 
 let maxSameLevelCounter = 3
@@ -58,7 +58,7 @@ class beacons: UIViewController {
     
     let motionManager: CMMotionManager = {
         if $0.isAccelerometerAvailable {
-            $0.accelerometerUpdateInterval = 0.1
+            $0.accelerometerUpdateInterval = 0.01
         }
         return $0
     }(CMMotionManager())
@@ -75,6 +75,9 @@ class beacons: UIViewController {
     @IBOutlet weak var otherDistanceLabel: UILabel!
     @IBOutlet weak var otherDirectionLabel: UILabel!
     @IBOutlet weak var otherActivityLabel: UILabel!
+    
+    //Testing IBOutlets
+    @IBOutlet weak var experimentButton: UIButton!
     
     //distance
     var distance: Double?
@@ -123,6 +126,44 @@ class beacons: UIViewController {
         var intention = motionIntention.none
         return intention
     }()
+    
+    var startExperiment: Bool = {
+        var flag = false
+        return flag
+    }()
+    
+    // Firebase Testing
+    var xArray: [Double] = {
+        var array = [Double]()
+        return array
+    }()
+    
+    var yArray: [Double] = {
+        var array = [Double]()
+        return array
+    }()
+    
+    var zArray: [Double] = {
+        var array = [Double]()
+        return array
+    }()
+    
+    var walkingArray: [Bool] = {
+        var array = [Bool]()
+        return array
+    }()
+    
+    var spinningArray: [Bool] = {
+        var array = [Bool]()
+        return array
+    }()
+    
+    var shakingArray: [Bool] = {
+        var array = [Bool]()
+        return array
+    }()
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -263,6 +304,7 @@ class beacons: UIViewController {
     func handleMotion(xComponent: Double, yComponent: Double, zComponent: Double){
         
         //DATA PROCESSING
+
         
         // 0.05 is the senitivity
         if(yComponent < ySen) {
@@ -316,6 +358,7 @@ class beacons: UIViewController {
             zMotionFlag = true
         }
         
+        
         //DATA RESULTS
         if( yMotionCounter > stationarySen && !yMotionFlag){
             
@@ -342,7 +385,57 @@ class beacons: UIViewController {
             ref.child(currentId).child("activity").setValue("WALKING")
             self.activityLabel.text = "WALKING"
             currentMotion = motionType.walking
+
         }
+        
+        if(startExperiment) {
+            
+            self.experimentButton.setTitle("Stop", for: .normal)
+            
+            xArray.append(xComponent)
+            yArray.append(yComponent)
+            zArray.append(zComponent)
+            
+            ref.child(currentId).child("xMotion").setValue(xArray)
+            ref.child(currentId).child("yMotion").setValue(yArray)
+            ref.child(currentId).child("zMotion").setValue(zArray)
+            
+            if(self.currentMotion == motionType.stationary) {
+                walkingArray.append(false)
+                spinningArray.append(false)
+                shakingArray.append(false)
+
+            } else {
+                
+                if(self.currentMotion == motionType.walking) {
+                    walkingArray.append(true)
+                    spinningArray.append(false)
+                    shakingArray.append(false)
+                } else if (self.currentMotion == motionType.shaking){
+                    shakingArray.append(true)
+                    walkingArray.append(false)
+                    spinningArray.append(false)
+                } else if (self.currentMotion == motionType.spinning){
+                    spinningArray.append(true)
+                    shakingArray.append(false)
+                    walkingArray.append(false)
+                }
+            }
+             ref.child(currentId).child("walking").setValue(walkingArray)
+             ref.child(currentId).child("shaking").setValue(shakingArray)
+             ref.child(currentId).child("spinning").setValue(spinningArray)
+            
+        } else {
+            
+            self.experimentButton.setTitle("Start", for: .normal)
+            xArray = []
+            yArray = []
+            zArray = []
+            walkingArray = []
+            spinningArray = []
+            shakingArray = []
+        }
+        
     }
     
     func setupObserver() {
@@ -363,6 +456,26 @@ class beacons: UIViewController {
             }
         }
     }
+    
+
+    @IBAction func startButtonTapped(_ sender: Any) {
+        self.startExperiment = !self.startExperiment
+
+    }
+    
+    @IBAction func resetButtonTapped(_ sender: Any) {
+        
+        ref.child(currentId).child("xMotion").setValue("")
+        ref.child(currentId).child("yMotion").setValue("")
+        ref.child(currentId).child("zMotion").setValue("")
+        ref.child(currentId).child("walking").setValue("")
+        ref.child(currentId).child("spinning").setValue("")
+        ref.child(currentId).child("shaking").setValue("")
+
+        
+    }
+    
+    
     
     // MARK: - Emitter
     

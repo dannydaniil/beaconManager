@@ -179,6 +179,25 @@
                         <viewLayoutGuide key="safeArea" id="3wA-Vj-sTx"/>
                     </view>
                     <navigationItem key="navigationItem" id="3iX-J8-nj1">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="Rig-s4-gQe">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KTs-Wf-knJ">
+                                <rect key="frame" x="16" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startButtonTapped:" destination="Sk2-zp-jir" eventType="touchUpInside" id="wXg-fl-U11"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cpL-B8-xZH">
+                            <rect key="frame" x="168" y="7" width="39" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Reset"/>
+                            <connections>
+                                <action selector="resetButtonTapped:" destination="Sk2-zp-jir" eventType="touchUpInside" id="g5b-Hm-Zpt"/>
+                            </connections>
+                        </button>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="cQa-YK-sBN">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Tv7-vc-7ni">
                                 <rect key="frame" x="302" y="7" width="57" height="30"/>
@@ -195,6 +214,7 @@
                         <outlet property="advertisingStatusLabel" destination="JFr-2a-BcX" id="GMI-xw-cok"/>
                         <outlet property="directionLabel" destination="kic-sL-Cja" id="UQs-vK-bbn"/>
                         <outlet property="distanceLabel" destination="QMM-mh-uqd" id="GK5-Zt-dgJ"/>
+                        <outlet property="experimentButton" destination="KTs-Wf-knJ" id="DKW-aX-vLt"/>
                         <outlet property="otherActivityLabel" destination="4hH-m4-3wb" id="N2R-i8-iMC"/>
                         <outlet property="otherDirectionLabel" destination="Iv2-EM-6oE" id="f2P-8f-uJn"/>
                         <outlet property="otherDistanceLabel" destination="lna-6O-bZ6" id="mor-p5-eJh"/>
@@ -426,13 +446,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PUv-NO-Gst">
-                                                    <rect key="frame" x="16" y="6.6666666666666679" width="382" height="30.000000000000004"/>
+                                                    <rect key="frame" x="16" y="6.6666666666666679" width="343" height="30.000000000000004"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                                 </textField>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CB6-EM-hl0">
-                                                    <rect key="frame" x="16" y="6.9999999999999982" width="382" height="30.333333333333329"/>
+                                                    <rect key="frame" x="16" y="6.9999999999999982" width="343" height="30.333333333333329"/>
                                                     <state key="normal" title="Restore Defaults"/>
                                                     <connections>
                                                         <action selector="restoreButtonPressed:" destination="aXo-Gq-HiN" eventType="touchUpInside" id="jz3-u4-npq"/>
