@@ -163,6 +163,11 @@ class beacons: UIViewController {
         return array
     }()
     
+    var stationaryArray: [Bool] = {
+        var array = [Bool]()
+        return array
+    }()
+    
     
 
     override func viewDidLoad() {
@@ -404,13 +409,15 @@ class beacons: UIViewController {
                 walkingArray.append(false)
                 spinningArray.append(false)
                 shakingArray.append(false)
+                stationaryArray.append(true)
 
             } else {
-                
+                  stationaryArray.append(false)
                 if(self.currentMotion == motionType.walking) {
                     walkingArray.append(true)
                     spinningArray.append(false)
                     shakingArray.append(false)
+                    
                 } else if (self.currentMotion == motionType.shaking){
                     shakingArray.append(true)
                     walkingArray.append(false)
@@ -424,6 +431,7 @@ class beacons: UIViewController {
              ref.child(currentId).child("walking").setValue(walkingArray)
              ref.child(currentId).child("shaking").setValue(shakingArray)
              ref.child(currentId).child("spinning").setValue(spinningArray)
+            ref.child(currentId).child("stationary").setValue(spinningArray)
             
         } else {
             
@@ -434,8 +442,8 @@ class beacons: UIViewController {
             walkingArray = []
             spinningArray = []
             shakingArray = []
+            stationaryArray = []
         }
-        
     }
     
     func setupObserver() {
@@ -460,19 +468,16 @@ class beacons: UIViewController {
 
     @IBAction func startButtonTapped(_ sender: Any) {
         self.startExperiment = !self.startExperiment
-
     }
     
     @IBAction func resetButtonTapped(_ sender: Any) {
-        
         ref.child(currentId).child("xMotion").setValue("")
         ref.child(currentId).child("yMotion").setValue("")
         ref.child(currentId).child("zMotion").setValue("")
         ref.child(currentId).child("walking").setValue("")
         ref.child(currentId).child("spinning").setValue("")
         ref.child(currentId).child("shaking").setValue("")
-
-        
+        ref.child(currentId).child("stationary").setValue("")
     }
     
     
